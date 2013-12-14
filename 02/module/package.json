@@ -1,0 +1,16 @@
+{
+  "name": "hello_test_jackson",
+  "version": "0.0.1",
+  "description": "A hello world package",
+  "main": "./hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "Hello",
+    "world"
+  ],
+  "author": "Jackson Tian",
+  "license": "MIT"
+}

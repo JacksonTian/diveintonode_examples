@@ -1,0 +1,8 @@
+examples/03/addon/build
+*.pdf
+.DS_Store
+v8.log
+node_modules
+*.pid
+*.log
+build
