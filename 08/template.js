@@ -1,3 +1,6 @@
+var fs = require('fs');
+var path = require('path');
+
 var escape = function (html) {
   return String(html)
     .replace(/&(?!\w+;)/g, '&amp;')
@@ -55,7 +58,7 @@ console.log(render(complie(tpl3), {items: [{name: 'Jackson'}, {name: '朴灵'}]}
 var preComplie = function (str) {
   return str.replace(/<%\s+(include.*)\s+%>/g, function (match, code) {
     var partial = code.split(/\s/)[1];
-    return fs.readFileSync(fs.join('/path/to/views', partial), 'utf8');
+    return fs.readFileSync(path.join('/path/to/views', partial), 'utf8');
   });
 };
 
