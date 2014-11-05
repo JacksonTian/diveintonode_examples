@@ -5,9 +5,15 @@ for (var i = 0; i < 1024 * 10; i++) {
   helloworld += "a";
 }
 
-// helloworld = new Buffer(helloworld);
+var str = helloworld;
+var buf = new Buffer(helloworld);
 
-http.createServer(function (request, response) {
-    response.writeHead(200);
-    response.end(helloworld);
-}).listen(8001);
+http.createServer(function (req, res) {
+  res.writeHead(200);
+  if (req.url === '/str') {
+    res.write(helloworld);
+  } else {
+    res.write(buf);
+  }
+  res.end();
+}).listen(8000);
