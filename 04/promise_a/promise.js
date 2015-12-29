@@ -16,7 +16,7 @@ Deferred.prototype.reject = function (err) {
 };
 
 Deferred.prototype.progress = function (data) {
-  this.promise.emit('progress', err);
+  this.promise.emit('progress', data);
 };
 
 Deferred.prototype.all = function (promises) {
